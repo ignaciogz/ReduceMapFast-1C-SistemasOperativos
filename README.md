@@ -1,4 +1,7 @@
-ReduceMapFast - Plataforma de Multiprocesamiento Paralelo
+ReduceMapFast
+======
+
+Plataforma de Multiprocesamiento Paralelo
 ======
 Inspirada en los conceptos de Google MapReduce, emulando algunas características del funcionamiento del proyecto Hadoop.
 
@@ -42,7 +45,7 @@ todas las tareas demanden el mismo esfuerzo y poder así lograr una planificaci�
 ARQUITECTURA:
 -----------------
 
-![Sin titulo](arquitectura.jpeg)
+![Sin titulo](arquitectura.jpg)
 
 PROCESO DESARROLLADO:
 -----------------
