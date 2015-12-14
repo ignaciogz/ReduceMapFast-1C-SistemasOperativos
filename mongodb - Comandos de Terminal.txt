@@ -1,0 +1,97 @@
+COMPILAR A MANO EL ARCHIVO DE LA DB (OPCION ALTERNATIVA LOQUITAS)
+	gcc -o example1 example1.c -lmongoc-1.0 -lbson-1.0 -I/usr/local/include/libmongoc-1.0 -I/usr/local/include/libbson-1.0
+
+---------------------------------------------------------------------
+PARA LA TERMINAL !!!!!!!!!! :
+
+sudo service mongodb //Para listar los flags disponibles
+
+sudo service mongodb start
+sudo service mongodb restart
+sudo service mongodb stop
+sudo service mongodb status
+
+mongo --version
+
+
+---------------------------------------------------------------------
+					COMANDOS DE TERMINAL MONGODB
+---------------------------------------------------------------------
+//Entrar a la consola de mongodb
+	mongo
+
+//Salir de la consola de mongodb
+	Ctrl+c
+
+//Limpiar consola
+	cls
+
+//Para saber dentro de que DB estoy:
+	db
+
+
+//Si querés cambiarte a otra podes hacerlo así:
+
+	use prueba
+
+//Si no existe la base de datos prueba la crea y la 
+//selecciona, caso contrario solo la selecciona.
+
+
+//Para listar todas las bases de datos podes ejecutar:
+
+	show dbs
+
+//Para listar colecciones podes usar:
+
+	show collections
+
+
+
+
+
+//Para crear una coleccion llamada “prueba01” y y almacenar documentos en ella podemos usar el siguiente comando de ejemplo:
+
+	db.prueba01.insert({titulo: "Primera prueba", contenido: "Mi primera prueba de insercion de un documento"})
+
+
+//Podemos ANADIR mas DOCUMENTOS en formato JSON con CAMPOS IGUALES o DIFERENTES al que  acabamos de añadir! 
+//y estos seran almacenados sin ningun problema, justamente esta es una de las ventajas de las bases de datos NoSQL.
+
+	db.prueba01.insert({titulo: "Segunda prueba", contenido: "Mi segunda prueba de insercion de un documento", hora: "03:20 PM", fecha: "9/01/2011"})
+
+
+
+
+
+//Para VER TODOS los DOCUMENTOS almacenados en nuestra coleccion prueba01 podemos usar el siguiente comando:
+
+	db.prueba01.find()
+
+//Si por ejemplo queremos VER SOLO UN RESULTADO podemos ejecutar el siguiente comando:
+
+	db.prueba01.findOne()
+
+
+
+
+
+// db.prueba01.find() podemos realizar una CONSULTA SENCILLA pasandole al metodo find() un parametro el cual sera un documento,
+// este documento sera una especie de ejemplo de lo que queremos que sea buscado. Por ejemplo si queremos que se nos muestre el 
+// documento en donde esta contenida la Key/Value “hora” : “03:20 PM” podemos pasarle eso mismo como documento:
+
+	db.prueba01.find({"hora" : "03:20 PM"})
+
+
+
+
+
+//Para ELIMINAR UN DOCUMENTO podemos realizarlo de manera similar a como hicimos la consulta anterior, es decir pasar un 
+//documento JSON como parametro a una funcion, solo que en este caso la funcion se llama remove():
+
+	db.prueba01.remove({"hora" : "03:20 PM"})
+
+//Para ELIMINA un DB completamente primero la tenés que 
+//seleccionar y luego ejecutar:
+
+	db.dropDatabase()
