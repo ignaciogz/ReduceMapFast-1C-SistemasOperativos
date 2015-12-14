@@ -2,14 +2,14 @@ ReduceMapFast
 ======
 
 Plataforma de Multiprocesamiento Paralelo
-======
+-----------------
 Inspirada en los conceptos de Google MapReduce, emulando algunas características del funcionamiento del proyecto Hadoop.
 
 El propósito del sistema es permitir al usuario ejecutar operaciones de análisis sobre
 grandes volúmenes de datos dividiendo el trabajo en subtareas y distribuyéndolas para ser
 ejecutadas de manera paralela en los diversos nodos del cluster de procesamiento.
 
-Para una mayor comprensión, utilizaremos el siguiente ejemplo:
+Ejemplo de uso:
 -----------------
 Imaginemos que tenemos el requerimiento de contar la cantidad de palabras escritas en un
 libro impreso de 100 hojas.
