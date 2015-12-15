@@ -49,3 +49,8 @@ ARQUITECTURA:
 
 PROCESO DESARROLLADO:
 -----------------
+FILE SYSTEM
+
+- Desarrollo de consola. Emulación de la terminal de linux, incluyendo funcionalidades de la misma.
+- Integracion de mongoDB al proyecto con mongo-c-driver y su API.
+- Persistencia de datos. Desarrollo relacionado con mongoDB: funciones para manejo de bloques de informacion e implementacion de rollback.
